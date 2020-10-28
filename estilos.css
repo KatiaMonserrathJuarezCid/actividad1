@@ -5,7 +5,7 @@
 }
 
 .grid-container>*{
-    box-shadow: -1px 1px 7px 0px violet;
+    box-shadow: -1px 1px 7px 0px rgb(0,0,0,0.7);
     border-radius: 4px;
     padding: 10px;
     text-align: center;
@@ -13,67 +13,69 @@
 
 .grid-container{
     display: grid;
-    grid-gap: 10px;
-    grid-template: 
-    "header" 100px
+    grid-gap : 10px;
+    grid-template:
+    "headre" 100px 
     "navbar" 50px
     "main" auto
     "sidebar" 100px
     "footer" 100px;
 }
 
-body{
-    font-family: sans-serif;
-    font-size: 1.2 rem;
-    min-height: 100%;
-}
-
 html{
     height: 100%;
 }
 
-.header{
-    grid-area: header;
-    background-color: teal;
+body{
+    font-family: sans-serif;
+    font-size: 1.2 rem;
+    min-height:  100%;
 }
 
-.nav{
+.header{
+    grid-area: header;
+    background-color: lawngreen;
+}
+
+.nav {
     grid-area: navbar;
-    background-color: springgreen;
+    background-color: darkviolet;
 }
 
 .aside{
     grid-area: sidebar;
-    background-color: lightblue;
+    background-color: darkturquoise;
 }
 
 .article{
     grid-area: main;
-    background-color: skyblue;
+    background-color: yellow;
 }
 
 .footer{
-    grid-area: footer;
-    background-color: lightgray;
+    grid-area : footer;
+    background-color: deeppink;
 }
 
-@media(min-width: 600px){
+@media (min-width: 600px){
     .grid-container{
-        grid-template: 
+        grid-template:
         "header header" 100px
-        "navbar navbar" 50px
+        "navbar navbar" 50px 
         "sidebar main" auto
         "footer footer" 100px/
-        200px  auto;
+        200px auto;
+        ;
     }
 }
 
 @media (min-width: 900px){
     .grid-container{
-        grid-template: 
+        grid-template:
         "header header header" 100px
         "navbar main sidebar" auto
         "footer footer footer" 100px/
-        200px  auto  200px;
+        200px auto 200px ;
+        ;
     }
 }
